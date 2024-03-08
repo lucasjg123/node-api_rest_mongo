@@ -1,0 +1,52 @@
+
+
+//GET
+    http://localhost:3000/books
+
+//GET:ID
+    http://localhost:3000/books/:id
+
+    En Path Variables ingresamos la id
+
+//POST
+    http://localhost:3000/books
+    Config postman:  body – raw - json 
+    {
+        "title": "1984",
+        "author": "G. Orwell",
+        "genre": "Distopia",
+        "publication_date": "1948"
+    }
+
+//PUT
+    http://localhost:3000/books/:id
+
+    Especificamos el id del registro en params
+
+    Config postman:  body – raw - json 
+    Mandamos el un json con todos los atrib del registro
+    Menos el id y el __v
+    {
+    "title": "1984",
+    "author": "G. Orwell",
+    "genre": "Drama", // modif
+    "publication_date": "1948"
+    }
+
+//PATCH 
+    http://localhost:3000/books/:id
+
+    Especificamos el id del registro en params
+
+    Config postman:  body – raw - json 
+
+    Mandamos en formato json el atributo del registro x que deseamos modificar
+
+    {
+        "genre": "Accion"
+    }
+
+//DELETE
+    http://localhost:3000/books/:id
+
+    Especificamos el id del registro a eliminar en params y ejecutamos
